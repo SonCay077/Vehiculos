@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Vehiculos{
     //Atributos
     String marca, modelo, color, anio;
@@ -27,6 +29,29 @@ class Vehiculos{
 }
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese los atributos del vehiculo: ");
+        System.out.println("Marca: ");
+        String marca = sc.nextLine();
+        System.out.println("Modelo: ");
+        String modelo = sc.nextLine();
+        System.out.println("Color: ");
+        String color = sc.nextLine();
+        System.out.println("Anio: ");
+        String anio = sc.nextLine();
 
+        Vehiculos v1 = new Vehiculos(marca, modelo, color, anio);
+
+        Vehiculos v2 = new Vehiculos("Toyota", "Corolla", "Gris", "2022");
+        Vehiculos v3 = new Vehiculos("Ford", "Mustang", "Negro", "2020");
+
+        v1.informacion();
+        v1.frenar();
+        v2.informacion();
+        v2.frenar();
+        v3.informacion();
+        v3.frenar();
+
+        sc.close();
     }
 }
