@@ -1,15 +1,32 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+class Vehiculos{
+    //Atributos
+    String marca, modelo, color, anio;
+
+    // Constructor
+    public Vehiculos(String marca, String modelo, String color, String anio){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+        this.anio = anio;
+    }
+
+    //Métod para información
+    void informacion(){
+       System.out.println("--- Ficha de Vehículo ---");
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Color: " + color);
+        System.out.println("Anio: " + anio);
+        System.out.println("--------------------------");
+    }
+
+    // Métod para frenar
+    void frenar(){
+        System.out.println("Frenando...");
+    }
+}
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
     }
 }
